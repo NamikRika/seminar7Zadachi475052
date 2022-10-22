@@ -133,11 +133,87 @@
 // // Задача 50 --------Завершена ------------------------------------- 
 
 
+Console.WriteLine("Задача 52 \n" +
+                   "Задайте двумерный массив из целых чисел. \n" +
+                   "Найдите среднее арифметическое элементов в каждом столбце. \n" +
+                   "1 4 7 2 \n" +
+                   "5 9 2 3 \n" +
+                   "8 4 2 4 \n" +
+                   "Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3. \n");
 
-// Задача 52. Задайте двумерный массив из целых чисел. 
-// Найдите среднее арифметическое элементов в каждом столбце.
-// Например, задан массив:
-// 1 4 7 2
-// 5 9 2 3
-// 8 4 2 4
-// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+Console.WriteLine("Решение:");
+
+int [,] FillArray ()
+{
+    Console.Write("Введите количество строк в массиве ");
+    int columnsArray = Convert.ToInt32(Console.ReadLine());
+
+    Console.Write("Введите количество столбцов в массиве ");
+    int rowsArray = Convert.ToInt32(Console.ReadLine());
+
+    int [,] realNumbersArray = new int[columnsArray, rowsArray];
+
+    Random random = new Random();
+    
+    for (int i = 0; i < columnsArray; i++)
+    {
+        for (int j = 0; j < rowsArray; j++)
+        {
+            realNumbersArray[i, j] = random.Next(0 , 10);                              
+             
+        }
+
+    }
+    return realNumbersArray;         
+    
+}
+
+void ShowArray(int[,] realNumbersArray)
+{
+    string temp = "";    
+    double temp2 = 0;
+
+    for (int i=0; i < realNumbersArray.GetLength(0); i++)    
+
+     {  
+        for (int j=0; j < realNumbersArray.GetLength(1); j++)
+        { 
+          
+          Console.Write(realNumbersArray[i, j]);
+          Console.Write(" ");                          
+                                     
+        }
+
+        Console.WriteLine();                         
+
+     }
+
+        Console.WriteLine("---------");      
+        Console.Write("Среднее арифметическое каждого столбца: ");
+
+
+  for (int i=0; i < realNumbersArray.GetLength(1); i++)    
+
+     {  
+        for (int j=0; j < realNumbersArray.GetLength(0); j++)
+        { 
+          
+         
+          temp2 = temp2 + (realNumbersArray[j, i]);                
+                                     
+        }
+        
+        temp2 = temp2 / realNumbersArray.GetLength(0);
+        temp2 = Math.Round(temp2, 2);
+        temp += Convert.ToString(temp2 + "; ");                     
+        temp2 = 0;               
+
+     }
+      
+     Console.WriteLine(temp);                    
+                
+}
+
+
+int [,] myArray = FillArray ();
+ShowArray(myArray);
