@@ -196,29 +196,38 @@
 // void CalculationArithmeticMean (int[,] realNumbersArray)
 
 // {
-//     string rezultat = "";    
-//     double temp2 = 0;
+    
+//     int seter = 0;   
+//     double temp2 = 0;      
+//     int size = realNumbersArray.GetLength(0);
+     
+//      double [] myArray51 = new double [size];
 
-//       for (int i=0; i < realNumbersArray.GetLength(1); i++)    // расчёт среднеарифметического каждого столбца
+//       for (int i=0; i < realNumbersArray.GetLength(1); i++)    // расчёт среднеарифметического каждого столбца         
 
 //      {  
-//         for (int j=0; j < realNumbersArray.GetLength(0); j++)
-//         {          
-         
-//           temp2 = temp2 + (realNumbersArray[j, i]);                
-                                     
-//         }
         
-//         temp2 = temp2 / realNumbersArray.GetLength(0);
-//         temp2 = Math.Round(temp2, 2);
-//         rezultat += Convert.ToString(temp2 + "; ");                     
-//         temp2 = 0;               
-
-//      }
+//         for (int j=0; j < realNumbersArray.GetLength(0); j++)
+//         {                   
+//           temp2 = temp2 + (realNumbersArray[j, i]);                                                                      
+//         }                    
       
-//      Console.WriteLine(rezultat);                    
-//      Console.Write("Среднее арифметическое каждого столбца: ");
-                
+//             temp2 = temp2 / realNumbersArray.GetLength(1);
+//             temp2 = Math.Round(temp2, 2);
+//             if (seter<size)
+//             {
+//               myArray51[seter] = temp2;                      
+//               seter++;
+//               }
+         
+         
+//          temp2 = 0;                      
+                         
+// }
+// Console.Write("Среднее арифметическое каждого столбца: ");
+//       for (int tt = 0; tt < size; tt++)
+//         Console.Write(myArray51[tt] + "; ");        
+        
 // }
  
 
