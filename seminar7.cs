@@ -1,4 +1,4 @@
-﻿// // Урок 7. Как не нужно писать код. Часть 1
+// // Урок 7. Как не нужно писать код. Часть 1
 
 // Console.WriteLine("Задача 47 \n" +
 //                   "Задайте двумерный массив размером MxN \n" +
@@ -132,6 +132,10 @@
 
 // // Задача 50 --------Завершена ------------------------------------- 
 
+
+
+// // Задача 50 --------Завершена ------------------------------------- 
+
 // Console.WriteLine("Задача 52 \n" +
 //                    "Задайте двумерный массив из целых чисел. \n" +
 //                    "Найдите среднее арифметическое элементов в каждом столбце. \n" +
@@ -169,9 +173,6 @@
 
 // void ShowArray(int[,] realNumbersArray)
 // {
-//     string rezultat = "";    
-//     double temp2 = 0;
-
 //     for (int i=0; i < realNumbersArray.GetLength(0); i++)    
 
 //      {  
@@ -188,10 +189,17 @@
 //      }
 
 //         Console.WriteLine("---------");      
-//         Console.Write("Среднее арифметическое каждого столбца: ");
 
 
-//   for (int i=0; i < realNumbersArray.GetLength(1); i++)    // расчёт среднеарифметического каждого столбца
+// }
+
+// void CalculationArithmeticMean (int[,] realNumbersArray)
+
+// {
+//     string rezultat = "";    
+//     double temp2 = 0;
+
+//       for (int i=0; i < realNumbersArray.GetLength(1); i++)    // расчёт среднеарифметического каждого столбца
 
 //      {  
 //         for (int j=0; j < realNumbersArray.GetLength(0); j++)
@@ -209,9 +217,11 @@
 //      }
       
 //      Console.WriteLine(rezultat);                    
+//      Console.Write("Среднее арифметическое каждого столбца: ");
                 
 // }
-
+ 
 
 // int [,] myArray = FillArray ();
 // ShowArray(myArray);
+// CalculationArithmeticMean(myArray);
