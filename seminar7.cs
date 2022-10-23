@@ -132,7 +132,6 @@
 
 // // Задача 50 --------Завершена ------------------------------------- 
 
-
 // Console.WriteLine("Задача 52 \n" +
 //                    "Задайте двумерный массив из целых чисел. \n" +
 //                    "Найдите среднее арифметическое элементов в каждом столбце. \n" +
@@ -170,7 +169,7 @@
 
 // void ShowArray(int[,] realNumbersArray)
 // {
-//     string temp = "";    
+//     string rezultat = "";    
 //     double temp2 = 0;
 
 //     for (int i=0; i < realNumbersArray.GetLength(0); i++)    
@@ -192,12 +191,11 @@
 //         Console.Write("Среднее арифметическое каждого столбца: ");
 
 
-//   for (int i=0; i < realNumbersArray.GetLength(1); i++)    
+//   for (int i=0; i < realNumbersArray.GetLength(1); i++)    // расчёт среднеарифметического каждого столбца
 
 //      {  
 //         for (int j=0; j < realNumbersArray.GetLength(0); j++)
-//         { 
-          
+//         {          
          
 //           temp2 = temp2 + (realNumbersArray[j, i]);                
                                      
@@ -205,12 +203,12 @@
         
 //         temp2 = temp2 / realNumbersArray.GetLength(0);
 //         temp2 = Math.Round(temp2, 2);
-//         temp += Convert.ToString(temp2 + "; ");                     
+//         rezultat += Convert.ToString(temp2 + "; ");                     
 //         temp2 = 0;               
 
 //      }
       
-//      Console.WriteLine(temp);                    
+//      Console.WriteLine(rezultat);                    
                 
 // }
 
